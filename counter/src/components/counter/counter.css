@@ -3,7 +3,7 @@
   flex-direction: row;
   width: 25%;
   height: 30%;
-  margin-left: 25%;
+  margin: 20%;
 }
 
 .counter {
@@ -11,16 +11,19 @@
   flex-grow: 1;
 }
 .counter-btn {
-  height: 100px;
+  size: 1rem;
+  outline: none;
   flex-grow: 1;
-  font-size: 50px;
+  font-size: 1rem;
+  background-color: transparent;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
 }
 .counter-label {
-  height: 100px;
+  height: 30%;
   flex-grow: 1;
-  font-size: 24px;
+  font-size: 1.25rem;
+  padding: 20%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
 }

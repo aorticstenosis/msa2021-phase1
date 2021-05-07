@@ -3,7 +3,8 @@ import "./counter.css"
 import CounterProps from "./counterProps";
 
 const Counter: React.FC<CounterProps> = ({counterTitle}) => {
-   
+    const password: string = "000"
+    
     const [count, setCount] = React.useState(5);
     const increment = () => {
         setCount(count + 1)
@@ -24,19 +25,17 @@ const Counter: React.FC<CounterProps> = ({counterTitle}) => {
     }, [count]);
 
     return <div className="counter-wrapper">
-    <div className="counter">
+        <div className="counter">
             <button className="counter-btn" onClick={decrement}>
             {"<"}
         </button>
         <div className="counter-label">
-            {`${counterTitle}: ${count}`}
+            {`${count}`}
         </div>
         <button className="counter-btn" onClick={increment}>
             {">"}
             </button>
-        <div className="counter-image">
-            {imageUrl != null ? <img alt="some string" src={imageUrl} /> : null}
-        </div>
+        
     </div>
 </div>
 }
