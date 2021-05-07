@@ -1,38 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Counter from "./components/counter/counter";
-import padlock from "./images/padlock.png";
+import PadlockTable from './components/counter/padlockTable';
+
 
 function App() {
+  const password = "000"
   
   return <div className="App">
-    <table>
-      <tr>
-        <td rowSpan={3}><img alt="padlock" src={padlock} className="image" /></td>
-        <td>
-          <table>
-            <tr>
-              <td>
-                <Counter counterTitle={""} />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <Counter counterTitle={""} />
-              </td>
-            </tr>
-            <tr>
-              <td>  
-            <Counter counterTitle={""} />
-              </td>
-            </tr>  
-          </table>
-        </td>
-    </tr>
-    </table>
- 
-       
+    <PadlockTable />
   </div>
 }
 

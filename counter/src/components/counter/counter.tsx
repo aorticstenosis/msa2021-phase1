@@ -1,8 +1,9 @@
 import React from "react"
 import "./counter.css"
 import CounterProps from "./counterProps";
+import Button from "@material-ui/core/Button";
 
-const Counter: React.FC<CounterProps> = ({counterTitle}) => {
+const Counter: React.FC<CounterProps> = ({counterValue}) => {
     const password: string = "000"
     
     const [count, setCount] = React.useState(5);
@@ -26,17 +27,16 @@ const Counter: React.FC<CounterProps> = ({counterTitle}) => {
 
     return <div className="counter-wrapper">
         <div className="counter">
-            <button className="counter-btn" onClick={decrement}>
+            <Button variant="outlined" onClick={decrement}>
             {"<"}
-        </button>
+        </Button>
         <div className="counter-label">
             {`${count}`}
         </div>
-        <button className="counter-btn" onClick={increment}>
+        <Button variant="outlined" onClick={increment}>
             {">"}
-            </button>
-        
-    </div>
+            </Button>
+        </div>
 </div>
 }
 
