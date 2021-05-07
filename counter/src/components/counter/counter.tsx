@@ -1,21 +1,27 @@
-import React from 'react'
+import React from "react"
 import "./counter.css"
+import CounterProps from "./counterProps";
 
-const counter: React.FC = () => {
-    const count = 5;
+const Counter: React.FC<CounterProps> = ({counterTitle}) => {
+   
+    const [count, setCount] = React.useState(5);
+   
+    const increment = () => {
+        setCount(count+1)
+    }
     return <div className="counter-wrapper">
     <div className="counter">
         <button className="counter-btn">
             {"<"}
         </button>
         <div className="counter-label">
-            {`Counter Value:  ${count}`}
+            {`${counterTitle}: ${count}`}
         </div>
-        <button className="counter-btn">
+        <button className="counter-btn" onClick={increment}>
             {">"}
         </button>
     </div>
 </div>
 }
 
-export default counter;
+export default Counter;
