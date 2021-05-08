@@ -1,0 +1,13 @@
+.padlock {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  width: 50%;
+  /* height: 15%; */
+  margin: 10%;
+}
+
+.table {
+  align-items: center;
+  margin-right: 15%;
+}
