@@ -65,10 +65,7 @@ const PadlockTable = () => {
             setLock(true);
             setImageURL(lock_animation)
         }
-        // else {
-        //     setLock(false);
-        //     setImageURL(unlock_animation)
-        // }
+       
     }, [values])
     /* end of useEffect */
 

@@ -5,7 +5,7 @@ import PadlockTable from './components/padlock/padlockTable';
 
 function App() {
   return <div className="App">
-    <h3>Choose the password to unlock!</h3>
+    <h3>Input the password to unlock!</h3>
     <PadlockTable />
   </div>
 }
