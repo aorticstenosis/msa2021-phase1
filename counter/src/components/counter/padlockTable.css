@@ -6,29 +6,3 @@
   /* height: 15%; */
   margin: 10%;
 }
-.counter-btn {
-  size: 1rem;
-  outline: none;
-  flex-grow: 1;
-  font-size: 1rem;
-  /* background-color: transparent; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-}
-.counter-label {
-  height: 30%;
-  flex-grow: 1;
-  font-size: 1.25rem;
-  padding: 20%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-}
-
-.counter-image {
-  display: flex;
-  align-content: center;
-}
-
-.counter-image img {
-  margin: auto;
-}

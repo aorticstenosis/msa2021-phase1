@@ -9,28 +9,31 @@ import Button from "@material-ui/core/Button"
 import Box from "@material-ui/core/Box/Box"
 
 const PadlockTable = () => {
+    //the password of the padlock is 000
     const password = "000"
-/**
- * the initial value of the padlock is set into 5 5 5
- */
+
+    /**
+     * the initial value of the padlock is set into 5 5 5
+     */
     const initialValue = {
         count1: "5",
         count2: "5",
         count3: "5"
     }
-/** 
- * Using useForm to import callback functions in order to minimise the complexity of this file.
- * It returns onChange and onSubmit functions, and the values that are initialised with initialValue.
-*/
+
+    /** 
+     * It returns onChange and onSubmit functions, and the values that are initialised with initialValue.
+    */
     const { onChange, onSubmit, values } = useForm(lockCheck, initialValue)
     
     const [lock, setLock] = React.useState<boolean>(true) //set Lock state
     const [imageURL, setImageURL] = React.useState(padlock)  //set ImageURL state. there are 3 images.
     
-/**
- * The lockCheck funcion is a callback passed to the onSubmit function in useForm
- * It is called upon button click
- */
+    /**
+     * The lockCheck funcion is a callback passed to the onSubmit function in useForm
+     * It is called upon button click and checks the password.
+     * If the password is correct, animation will be shown. If wrong, alert will be triggered
+     */
     function lockCheck() {
         //when the lock is on and shows "Unlock" 
         if (lock === false) {
@@ -49,13 +52,13 @@ const PadlockTable = () => {
             }
         }
     }
-/* end of callback function */
-    
-    
-/**
- * UseEffect hook to monitor the value of the padlock. When the value changes, i.e not the correct password,
- * the lock should be put on
- */
+    /* end of callback function */
+        
+        
+    /**
+     * UseEffect hook to monitor the value of the padlock. When the value changes, i.e not the correct password,
+     * the lock will be put on.
+     */
     React.useEffect(() => {
         let inputPassword = values.count1 + values.count2 + values.count3
         if (inputPassword !== password) {
@@ -66,11 +69,11 @@ const PadlockTable = () => {
             setImageURL(unlock_animation)
         }
     }, [values])
-/* end of useEffect */
+    /* end of useEffect */
 
-/**
- * JSX element. It contained a form, a table and a button
- */
+    /**
+     * JSX element. It contained a form, a table and a button
+     */
     return (
         <form onSubmit={onSubmit}>
         <table className="table">
@@ -138,7 +141,7 @@ const PadlockTable = () => {
         </Box>
         </form>
     )
-/* end of JSX element */
+    /* end of JSX element */
      
 }
 
