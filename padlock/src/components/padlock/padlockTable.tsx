@@ -64,10 +64,11 @@ const PadlockTable = () => {
         if (inputPassword !== password) {
             setLock(true);
             setImageURL(lock_animation)
-        } else {
-            setLock(false);
-            setImageURL(unlock_animation)
         }
+        // else {
+        //     setLock(false);
+        //     setImageURL(unlock_animation)
+        // }
     }, [values])
     /* end of useEffect */
 
