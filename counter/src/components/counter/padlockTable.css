@@ -1,14 +1,10 @@
-.counter-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 20%;
-  height: 15%;
-  margin: 10%;
-}
-
 .counter {
   display: flex;
   flex-grow: 1;
+  flex-direction: row;
+  width: 50%;
+  /* height: 15%; */
+  margin: 10%;
 }
 .counter-btn {
   size: 1rem;
